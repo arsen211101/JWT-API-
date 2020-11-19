@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JWTAPI</name>
+    </assembly>
+    <members>
+        <member name="T:JWTAPI.Persistence.DatabaseSeed">
+            <summary>
+            EF Core already supports database seeding throught overriding "OnModelCreating", but I decided to create a separate seed class to avoid 
+            injecting IPasswordHasher into AppDbContext.
+            To understand how to use database seeding into DbContext classes, check this link: https://docs.microsoft.com/en-us/ef/core/modeling/data-seeding
+            </summary>
+        </member>
+        <member name="T:JWTAPI.Security.Hashing.PasswordHasher">
+            <summary>
+            This password hasher is the same used by ASP.NET Identity.
+            Explanation: https://stackoverflow.com/questions/20621950/asp-net-identity-default-password-hasher-how-does-it-work-and-is-it-secure
+            Full implementation: https://gist.github.com/malkafly/e873228cb9515010bdbe
+            </summary>
+        </member>
+    </members>
+</doc>
